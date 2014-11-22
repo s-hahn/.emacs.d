@@ -1,9 +1,0 @@
-[submodule "submodules/org-mode"]
-	path = submodules/org-mode
-	url = git://orgmode.org/org-mode.git
-[submodule "submodules/org-reveal"]
-	path = submodules/org-reveal
-	url = https://github.com/yjwen/org-reveal.git
-[submodule "submodules/evil-rebellion"]
-	path = submodules/evil-rebellion
-	url = https://github.com/tarleb/evil-rebellion
