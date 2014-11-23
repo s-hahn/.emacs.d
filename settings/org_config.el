@@ -142,8 +142,8 @@
 
 (require 'ox-beamer)
 
-(setq org-ditaa-jar-path "~/.emacs.d/config/ditaa.jar")
-(setq org-plantuml-jar-path "~/.emacs.d/config/plantuml.jar")
+(setq org-ditaa-jar-path "/usr/bin/ditaa")
+(setq org-plantuml-jar-path "~/Dropbox/shahn/org/plantuml.jar")
 
 ;; (add-hook 'org-babel-after-execute-hook 'bh/display-inline-images 'append)
 
