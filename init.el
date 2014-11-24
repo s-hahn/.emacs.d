@@ -3,7 +3,6 @@
 
 ;;; Code:
 (add-to-list 'load-path (concat user-emacs-directory "settings"))
-(add-to-list 'load-path (concat user-emacs-directory "themes"))
 (add-to-list 'load-path "~/.emacs.d/submodules/org-mode/lisp")
 (add-to-list 'load-path "~/.emacs.d/submodules/org-mode/contrib/lisp" t)
 (add-to-list 'load-path "~/.emacs.d/submodules/org-reveal" t)
