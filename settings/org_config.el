@@ -57,18 +57,18 @@
 ;; fetch changes from mobile org
 (org-mobile-pull) ;; run org-mobile-pull at startup
 
-(defun install-monitor (file secs)
-  (run-with-timer
-   0 secs
-   (lambda (f p)
-     (unless (< p (second (time-since (elt (file-attributes f) 5))))
-       (org-mobile-pull)))))
+;;(defun install-monitor (file secs)
+;; (run-with-timer
+;;   0 secs
+;;   (lambda (f p)
+;;     (unless (< p (second (time-since (elt (file-attributes f) 5))))
+;;       (org-mobile-pull)))))
 
-(install-monitor (file-truename
-                  (concat
-                   (file-name-as-directory org-mobile-directory)
-                          org-mobile-capture-file))
-                 5)
+;;(install-monitor (file-truename
+;;                  (concat
+;;                   (file-name-as-directory org-mobile-directory)
+;;                          org-mobile-capture-file))
+;;                 5)
 
 ;; Do a pull every 5 minutes to circumvent problems with timestamping
 ;; (ie. dropbox bugs)
@@ -112,7 +112,7 @@
 (add-hook 'org-mode-hook 'org-indent-mode)
 (add-hook 'org-mode-hook 'auto-fill-mode)
 
-(require 'org-latex)
+;(require 'org-latex)
 (unless (boundp 'org-latex-classes)
   (setq org-latex-classes nil))
 

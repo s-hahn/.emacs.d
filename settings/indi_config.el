@@ -5,30 +5,30 @@
 
 ;; setup theme
 ;; (require-package 'color-theme-solarized)
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'zenburn t)
+;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;;(load-theme 'zenburn t)
 ;; (require-package 'color-theme-wombat)
 ;; (load-theme 'wombat t)
-;;:(require 'material-theme)
+(require 'material-theme)
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono 10"))
+(set-face-attribute 'default t :font "DejaVu Sans Mono 10")
 
 (define-key key-translation-map [dead-circumflex] "^")
 
 ;; setup powerline
 (require-package 'powerline)
 (require 'powerline)
-(powerline-default-theme)
-(require-package 'powerline-evil)
-
-(require 'powerline-evil)
 (setq powerline-color1 "#657b83")
 (setq powerline-color2 "#839496")
+(powerline-default-theme)
 
 (set-face-attribute 'mode-line nil
                     :foreground "#fdf6e3"
-                    :background "#16738F"
+                    :background "#8ec200"
                     :box nil)
 (set-face-attribute 'mode-line-inactive nil
-		    :background "#444444"
+		    :background "#83a9ce"
+		    :foreground "#666666"
                     :box nil)
 
 ;; install smart parens
@@ -178,46 +178,17 @@
 
 ; desktop mode (save buffers on exit)
 ; autosave buffers
-(require 'desktop)
-  (desktop-save-mode 1)
-  (defun my-desktop-save ()
-    (interactive)
+;;(require 'desktop)
+;;  (desktop-save-mode 1)
+;;  (defun my-desktop-save ()
+;;    (interactive)
     ;; Don't call desktop-save-in-desktop-dir, as it prints a message.
-    (if (eq (desktop-owner) (emacs-pid))
-        (desktop-save desktop-dirname)))
-  (add-hook 'auto-save-hook 'my-desktop-save)
-
-; toggle fullscreen on start-up
-(defun toggle-fullscreen ()
-  "Toggle fullscreen."
-  (interactive)
-  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
-  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0)))
-;; (toggle-fullscreen)
-
-; switch fullscreen
-(defun switch-fullscreen nil
-  "Switch fullscreen."
-  (interactive)
-  (let* ((modes '(nil fullboth fullwidth fullheight))
-         (cm (cdr (assoc 'fullscreen (frame-parameters) ) ) )
-         (next (cadr (member cm modes) ) ) )
-    (modify-frame-parameters
-     (selected-frame)
-     (list (cons 'fullscreen next)))))
-
-;; (define-key global-map [f11] 'switch-fullscreen)
+;;    (if (eq (desktop-owner) (emacs-pid))
+;;        (desktop-save desktop-dirname)))
+;;  (add-hook 'auto-save-hook 'my-desktop-save)
 
 ; copy paste in terminal using middle mouse button
 ; (load "copypaste.el")
-
-;; save current windows
-;(add-hook 'kill-emacs-hook 'save-current-configuration)
-
-;; resume last window configuration
-;(resume)
 
 (provide 'indi_config)
 ;;; indi_config.el ends here
