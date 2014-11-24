@@ -4,14 +4,23 @@
 (require 'cl-lib)
 
 ;; setup theme
-;; (require-package 'color-theme-solarized)
-;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-;;(load-theme 'zenburn t)
+(require-package 'zenburn-theme)
+(load-theme 'zenburn t)
+
+;;(require-package 'ample-theme)
+;;(load-theme 'ample t)
+;;(enable-theme 'ample)
+
+;;(require-package 'monokai-theme)
+;;(load-theme 'monokai t)
+
 ;; (require-package 'color-theme-wombat)
 ;; (load-theme 'wombat t)
-(require 'material-theme)
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono 10"))
-(set-face-attribute 'default t :font "DejaVu Sans Mono 10")
+
+;;(require 'material-theme)
+
+;;(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono 10"))
+;;(set-face-attribute 'default t :font "DejaVu Sans Mono 10")
 
 (define-key key-translation-map [dead-circumflex] "^")
 
