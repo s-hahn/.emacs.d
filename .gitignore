@@ -1,5 +1,6 @@
 *.*~
 .emacs.desktop
+.python-environments
 .org-id-locations
 ac-comphist.dat
 elpa/
