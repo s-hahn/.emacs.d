@@ -19,6 +19,6 @@
 (require 'helm_config)
 (require 'org_config)
 
-(work_geo_env)
+(default_geo_env)
 
 ;;; init.el ends here
