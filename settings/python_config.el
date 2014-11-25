@@ -1,23 +1,23 @@
 
 ;; setup python mode
 
-(require-package 'python-mode)
-(autoload 'python-mode "python-mode" "Python Mode." t)
-(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+;;(require-package 'python-mode)
+;;(autoload 'python-mode "python-mode" "Python Mode." t)
+;;(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+;;(add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
-;;(require 'python)
-;;(setq
-;; python-shell-interpreter "ipython"
-;; python-shell-interpreter-args ""
-;; python-shell-prompt-regexp "In \\[[0-9]+\\]: "
-;; python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
-;; python-shell-completion-setup-code
-;;   "from IPython.core.completerlib import module_completion"
-;; python-shell-completion-module-string-code
-;;   "';'.join(module_completion('''%s'''))\n"
-;; python-shell-completion-string-code
-;;   "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
+(require 'python)
+(setq
+ python-shell-interpreter "ipython"
+ python-shell-interpreter-args ""
+ python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+ python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
+ python-shell-completion-setup-code
+   "from IPython.core.completerlib import module_completion"
+ python-shell-completion-module-string-code
+   "';'.join(module_completion('''%s'''))\n"
+ python-shell-completion-string-code
+   "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
 ;; (require-package 'python-mode)
 ;; (require 'python-mde
@@ -41,7 +41,8 @@
 (require-package 'jedi)
 (require-package 'jedi-direx)
 (add-hook 'python-mode-hook 'jedi:setup)
-(add-hook 'jedi-mode-hook 'jedi-direx:setup)
+
+;(add-hook 'jedi-mode-hook 'jedi-direx:setup)
 (setq jedi:setup-keys t) ; optional
 (setq jedi:complete-on-dot t) ; optional
 
@@ -134,13 +135,13 @@
   "Run a terminal command in an external xterm window."
   (interactive)
   (setq bn (buffer-file-name))
-  (shell-command (concat "gnome-terminal -x $HOME/.emacs.d/custom/terminal_run.sh '" bn "'")))
+  (shell-command (concat "gnome-terminal -x $HOME/.emacs.d/scripts/terminal_run.sh '" bn "'")))
 
 (defun pdb-ext ()
   "Run a terminal command in an external xterm window."
   (interactive)
   (setq bn (buffer-file-name))
-  (shell-command (concat "gnome-terminal -x ~/.emacs.d/custom/terminal_pdb.sh '" bn "'")))
+  (shell-command (concat "gnome-terminal -x ~/.emacs.d/scripts/terminal_pdb.sh '" bn "'")))
 
 (defun py-multi-term ()
   "Send ESC in term mode."

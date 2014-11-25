@@ -3,6 +3,13 @@
 ;;; Code:
 (setq venv-location '("~/py27virenv/"))
 
+(defun default_geo_env ()
+  "Home geo enviroment."
+  (interactive)
+  (venv-workon "py27virenv")
+  (setenv "PYTHONPATH" "/home/shahn")
+  (setq default-directory "/home/shahn"))
+
 (defun home_geo_env ()
   "Home geo enviroment."
   (interactive)
