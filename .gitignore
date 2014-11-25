@@ -1,4 +1,5 @@
 *.*~
+.python-environments
 .emacs.desktop
 .org-id-locations
 ac-comphist.dat
