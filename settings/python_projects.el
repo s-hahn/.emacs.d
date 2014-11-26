@@ -7,8 +7,8 @@
   "Default geo enviroment."
   (interactive)
   (venv-workon "py27virenv")
-  (setenv "PYTHONPATH" "~/GEO_Python")
-  (setq default-directory "~"))
+  (setenv "PYTHONPATH" "/media/sf_D/shahn/swdvlp/GEO_Python")
+  (setq default-directory "/media/sf_D/shahn/swdvlp"))
 
 (defun home_geo_env ()
   "Home geo enviroment."
