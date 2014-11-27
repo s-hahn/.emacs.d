@@ -4,6 +4,7 @@
 .python-environments
 .org-id-locations
 ac-comphist.dat
+bookmarks
 projectile*
 elpa/
 flycheck_org-clock-save.el
