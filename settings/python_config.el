@@ -75,7 +75,7 @@
 
 (require-package 'pytest)
 (require 'pytest)
-(setq pytest-global-name "py.test")
+(setq pytest-global-name "py.test -s")
 
 ;; bind to C-c t
 (add-hook 'python-mode-hook
