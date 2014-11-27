@@ -75,15 +75,20 @@
 
 (require-package 'pytest)
 (require 'pytest)
+(setq pytest-global-name "py.test")
+
+;; bind to C-c t
+(add-hook 'python-mode-hook
+	  (lambda () (local-set-key (kbd "C-c t") 'pytest-one)))
 
 ;; custom function to run pytest on current file
 (defun py-test-current ()
   (interactive)
   (compile (concat "py.test -s " (buffer-file-name)))
 )
-;; bind to C-c t
+;; bind to C-c m
 (add-hook 'python-mode-hook
-	  (lambda () (local-set-key (kbd "C-c t") 'py-test-current)))
+	  (lambda () (local-set-key (kbd "C-c m") 'py-test-current)))
 
 ;; custom function to run pyflakes on current file
 (defun pyflakes-current ()
