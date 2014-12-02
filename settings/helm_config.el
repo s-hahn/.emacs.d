@@ -16,6 +16,7 @@
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
 
+(setq projectile-generic-command "find -L . -type f -print0")
 ;; (defun cp/projectile-find ()
 ;;  "if not in a project switch to project"
 ;;  (interactive)
