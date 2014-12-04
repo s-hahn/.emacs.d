@@ -1,5 +1,4 @@
 ;; setup evil mode
-(require-package 'evil)
 (require-package 'evil-leader)
 (require-package 'evil-numbers)
 (require-package 'evil-visualstar)
@@ -45,6 +44,15 @@
 (setq evil-default-cursor t)
 (global-evil-surround-mode 1)
 (require 'evil-rebellion)
+
+(evil-set-initial-state 'git-commit-mode 'insert)
+(evil-set-initial-state 'git-rebase-mode 'emacs)
+(evil-set-initial-state 'org-agenda-mode 'emacs)
+(evil-set-initial-state 'shell-mode 'insert)
+(evil-set-initial-state 'term-mode 'emacs)
+(evil-set-initial-state 'dired-mode 'emacs)
+(evil-set-initial-state 'help-mode 'emacs)
+(evil-set-initial-state 'magit-branch-manager-mode 'emacs)
 
 (provide 'evilmode_config)
 ;;; evilmode_config.el ends here
