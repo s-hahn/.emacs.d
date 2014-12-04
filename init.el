@@ -14,10 +14,10 @@
 (require 'package)
 (package-initialize)
 (require 'indi_config)
-(require 'evilmode_config)
 (require 'python_config)
 (require 'helm_config)
 (require 'org_config)
+(require 'evilmode_config)
 
 (default_geo_env)
 
