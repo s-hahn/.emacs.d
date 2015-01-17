@@ -7,6 +7,7 @@
 (add-to-list 'load-path "~/.emacs.d/submodules/org-mode/contrib/lisp" t)
 (add-to-list 'load-path "~/.emacs.d/submodules/org-reveal" t)
 (add-to-list 'load-path "~/.emacs.d/submodules/evil-rebellion" t)
+(add-to-list 'load-path "~/.emacs.d/submodules/helm-bibtex" t)
 (require 'init-packages)
 
 (require-package 'load-relative)
@@ -18,6 +19,7 @@
 (require 'helm_config)
 (require 'org_config)
 (require 'evilmode_config)
+(require 'research_config)
 
 (default_geo_env)
 

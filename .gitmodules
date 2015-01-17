@@ -7,3 +7,7 @@
 [submodule "submodules/org-mode"]
 	path = submodules/org-mode
 	url = git://orgmode.org/org-mode.git
+[submodule "submodules/helm-bibtex"]
+        path = submodules/helm-bibtex
+	url = http://github.com/tmalsburg/helm-bibtex
+
