@@ -4,6 +4,7 @@
 
 (autoload 'helm-bibtex "helm-bibtex" "" t)
 (setq helm-bibtex-bibliography "/home/shahn/Dropbox/shahn/research/latex/library.bib")
+(setq helm-bibtex-bibliography '("/home/shahn/Dropbox/shahn/research/latex/library.bib" "/home/shahn/Dropbox/shahn/research/latex/zotero.bib"))
 (setq helm-bibtex-library-path "/home/shahn/Dropbox/shahn/research/papers/pdf")
 (setq helm-bibtex-notes-path "/home/shahn/Dropbox/shahn/research/papers/notes")
 (setq helm-bibtex-notes-extension ".org")
