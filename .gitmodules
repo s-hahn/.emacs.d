@@ -10,4 +10,6 @@
 [submodule "submodules/helm-bibtex"]
         path = submodules/helm-bibtex
 	url = http://github.com/tmalsburg/helm-bibtex
-
+[submodule "submodules/org-ref"]
+	path = submodules/org-ref
+	url = https://github.com/jkitchin/org-ref

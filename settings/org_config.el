@@ -20,6 +20,11 @@
                    'org-bibtex-open
                    'my-rtcite-export-handler)
 
+(require 'org-ref)
+(require 'jmax-bibtex)
+(setq org-ref-bibliography-notes "~/Dropbox/shahn/org/paper_notes.org")
+(setq org-ref-default-bibliography '("/home/shahn/Dropbox/shahn/research/latex/library"))
+
 (setq org-src-fontify-natively t)
 (setq org-agenda-span 'day)
 
