@@ -144,6 +144,9 @@
 
 (require 'ox-beamer)
 
+(setq org-latex-create-formula-image-program 'dvipng)
+;;(setq org-latex-create-formula-image-program 'imagemagick)
+
 (setq org-ditaa-jar-path "/usr/bin/ditaa")
 (setq org-plantuml-jar-path "~/Dropbox/shahn/org/plantuml.jar")
 
@@ -184,7 +187,7 @@
 (global-set-key (kbd "C-<f8>") 'org-clock-in)
 
 (global-set-key (kbd "<f5>") 'bh/org-todo)
-(global-set-key (kbd "<S-f5>") 'bh/widen)
+(global-set-key (kbd "<s-f5>") 'bh/widen)
 
 (global-set-key (kbd "<f7> I") 'bh/punch-in)
 (global-set-key (kbd "<f7> O") 'bh/punch-out)
@@ -198,7 +201,6 @@
 ;; if state is changed using shift then no dates or notes are recorded
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
 ;; set tags according to state of the task
-
 
 ;; Diary
 (require 'holidays)

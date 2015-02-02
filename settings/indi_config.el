@@ -182,7 +182,7 @@
 (defun insert-date ()
   "Insert current date."
   (interactive)
-  (insert (format-time-string "%m/%d/%Y")))
+  (insert (format-time-string "%Y-%m-%d")))
 (global-set-key (kbd "C-c d") 'insert-date)
 
 ; desktop mode (save buffers on exit)
